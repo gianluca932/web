@@ -49,19 +49,12 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    //{ href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "gianluca@giordanogianluca.com",
-    tel: "+123456789",
+    tel: "+39 3348413240",
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://dub.sh/dillion-github",
-        icon: Icons.github,
-
-        navbar: true,
-      },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/gianlucagiordan0/",
@@ -69,25 +62,12 @@ export const DATA = {
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: false,
-      },
-      email: {
+      Email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto: gianluca@giordanogianluca.com",
         icon: Icons.email,
 
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -214,7 +194,7 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-      title: "Business Inteliggence",
+      title: "Business Dashboard",
       href: "#",
       dates: "June 2023 - Present",
       active: true,
