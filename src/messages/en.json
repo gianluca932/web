@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "hi": "Ciao, sono {name} 👋",
+    "description": "Programmatore di Software e imprenditore digitale, insieme a te posso far crescere la tua azienda",
+    "cta": "Parliamone!"
+  },
+  "sections": {
+    "about": {
+      "title": "Chi sono",
+      "summary": "Sono {name}, un {role} con {yearsOfExperience} anni di esperienza nel campo del {field}."
+    },
+    "workedWith": "Ho lavorato con:",
+    "education": "Formazione",
+    "skills": "Competenze",
+    "projects": {
+      "chip": "I miei progetti",
+      "title": "Dai un'occhiata agli ultimi lavori",
+      "desc": "Ho lavorato su vari progetti, da siti semplici ad applicazioni web complesse. Eccone alcuni dei miei preferiti."
+    },
+    "courses": {
+      "chip": "Corsi",
+      "title": "Mi piace imparare",
+      "desc": "Mentre lavoravo ho completato corsi su motivazione, leadership e gestione del team, applicando subito ciò che ho imparato."
+    },
+    "contact": {
+      "chip": "Contatti",
+      "title": "Rimaniamo in contatto",
+      "desc": "Vuoi parlare? Scrivimi un DM {link} e risponderò quando posso. Ignorerò proposte commerciali non richieste.",
+      "linkedin": "con una domanda diretta su LinkedIn",
+      "added": "and I&apos;ll respond whenever I can. I will ignore all soliciting.",
+      "present": "Oggi"
+    }
+  }
+}

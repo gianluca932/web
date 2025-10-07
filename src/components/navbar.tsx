@@ -7,9 +7,10 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
+import { DATA } from "@/data/resume.en";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { LocaleSwitcher } from "./LocaleSwitcher/LocaleSwitcher";
 
 export default function Navbar() {
   return (
@@ -70,6 +71,9 @@ export default function Navbar() {
             </TooltipContent>
           </Tooltip>
         </DockIcon>
+        <Separator orientation="vertical" className="h-full py-2" />
+
+        <LocaleSwitcher locale="en" />
       </Dock>
     </div>
   );
