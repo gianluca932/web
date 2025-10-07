@@ -12,33 +12,44 @@ import "../globals.css";
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(DATA_EN.url),
-  title: { default: DATA_EN.name, template: `%s | ${DATA_EN.name}` },
-  description: DATA_EN.description,
-  openGraph: {
-    title: DATA_EN.name,
-    description: DATA_EN.description,
-    url: DATA_EN.url,
-    siteName: DATA_EN.name,
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: { title: DATA_EN.name, card: "summary_large_image" },
-  verification: { google: "", yandex: "" },
-};
+import { DATA as EN } from "@/data/resume.en";
+import { DATA as IT } from "@/data/resume.it";
 
+const SITE = "https://giordanogianluca.com";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: "en" | "it" };
+}): Promise<Metadata> {
+  const D = locale === "it" ? IT : EN;
+
+  return {
+    metadataBase: new URL(SITE),
+    title: { default: D.name, template: `%s | ${D.name}` },
+    description: D.description,
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        it: "/it",
+      },
+    },
+    openGraph: {
+      title: D.name,
+      description: D.description,
+      url: `/${locale}`,
+      siteName: D.name,
+      locale: locale === "it" ? "it_IT" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: D.name,
+      description: D.description,
+    },
+  };
+}
 // (Optional) make metadata locale-aware:
 // export async function generateMetadata({params:{locale}}): Promise<Metadata> { ... pick EN/IT ... }
 
